@@ -6,13 +6,14 @@
 
 @section('content')
 
-    <div>
-        <h1 class="text-uppercase"> all our &#x1F682;</h1>
+<div class="box">
+    <div class="container">
+        <h1 class="text-uppercase py-4"> all our &#x1F682;</h1>
 
         <div class="row">
             @foreach($trains as $elem) 
             <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card mb-3" style="width: 20rem;">
                     <div class="card-body">
                         <div><strong> ID: </strong>{{$elem['id']}}</div>
                         <div><strong> Company: </strong> {{$elem['company']}}</div>
@@ -42,7 +43,7 @@
             @endforeach
         </div>
 
-        <h6 class="text-uppercase">Hey! Click <a href="{{ route('home') }}"> &#x1F64B; </a> to go back to the &#127968; page</h6>
+        <h3 class="text-uppercase text-center pb-4">Hey! Click <a href="{{ route('home') }}"> &#x1F64B; </a> to go back to the &#127968; page</h3>
     </div>
-
+</div>
 @endsection
