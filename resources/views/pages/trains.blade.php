@@ -22,8 +22,20 @@
                         <div><strong> Arrival Time: </strong>{{$elem['arrival_time']}}</div>
                         <div><strong> Train Code: </strong>{{$elem['train_code']}}</div>
                         <div><strong> Carriages Number: </strong>{{$elem['carriages_number']}}</div>
-                        <div><strong> On Time: </strong>{{$elem['on_time']}}</div>
-                        <div><strong> Cancelled: </strong>{{$elem['cancelled']}}</div>
+                        <div><strong> On Time: </strong>
+                            @if ($elem['on_time'] == 0)
+                                No 
+                            @else 
+                                Yes
+                            @endif
+                        </div>
+                        <div><strong> Cancelled: </strong>
+                            @if ($elem['cancelled'] == 0)
+                                No 
+                            @else 
+                                Yes
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
